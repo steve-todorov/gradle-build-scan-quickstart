@@ -13,11 +13,11 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(8)
+        languageVersion.set(JavaLanguageVersion.of(8))
     }
 }
 
 extensions.findByName("buildScan")?.withGroovyBuilder {
-  setProperty("termsOfServiceUrl", "https://gradle.com/terms-of-service")
-  setProperty("termsOfServiceAgree", "yes")
+    setProperty("termsOfServiceUrl", "https://gradle.com/terms-of-service")
+    setProperty("termsOfServiceAgree", "yes")
 }
